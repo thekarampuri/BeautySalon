@@ -2,6 +2,7 @@
 node_modules/
 .pnp
 .pnp.js
+.env
 
 # Next.js build output
 .next/
@@ -41,3 +42,5 @@ pnpm-debug.log*
 
 # Misc
 *.pem
+
+/lib/generated/prisma

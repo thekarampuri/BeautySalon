@@ -1,0 +1,218 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// ─── Enums ────────────────────────────────────────────
+
+enum ServiceCategory {
+  Hair
+  Skin
+  Makeup
+  Nail
+  Bridal
+  Spa
+}
+
+enum EnquiryType {
+  Bridal
+  Admission
+  Contact
+}
+
+enum EnquiryStatus {
+  New
+  Contacted
+  Converted
+  Closed
+}
+
+enum BookingStatus {
+  Pending
+  Confirmed
+  Completed
+  Cancelled
+}
+
+enum InvoiceStatus {
+  Paid
+  Unpaid
+}
+
+enum StudentStatus {
+  Ongoing
+  Completed
+}
+
+enum GalleryCategory {
+  Bridal
+  Makeup
+  Hair
+  Salon
+  Students
+  Events
+}
+
+// ─── Services ─────────────────────────────────────────
+
+model Service {
+  id          String          @id @default(cuid())
+  name        String
+  category    ServiceCategory
+  price       Int
+  duration    String
+  description String
+  image       String?
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
+
+  bookings    Booking[]
+}
+
+// ─── Courses ──────────────────────────────────────────
+
+model Course {
+  id          String   @id @default(cuid())
+  name        String
+  duration    String
+  fees        Int
+  description String
+  eligibility String
+  image       String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  modules     CourseModule[]
+  students    Student[]
+}
+
+model CourseModule {
+  id       String @id @default(cuid())
+  courseId String
+  title    String
+  order    Int
+
+  course   Course @relation(fields: [courseId], references: [id], onDelete: Cascade)
+}
+
+// ─── Enquiries ────────────────────────────────────────
+
+model Enquiry {
+  id        String        @id @default(cuid())
+  name      String
+  mobile    String
+  type      EnquiryType
+  details   String
+  status    EnquiryStatus @default(New)
+  notes     String?
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+}
+
+// ─── Bookings ─────────────────────────────────────────
+
+model Booking {
+  id           String        @id @default(cuid())
+  customerName String
+  mobile       String
+  serviceId    String?
+  date         DateTime
+  time         String
+  status       BookingStatus @default(Pending)
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+
+  service      Service?  @relation(fields: [serviceId], references: [id])
+  invoice      Invoice?
+}
+
+// ─── Invoices ─────────────────────────────────────────
+
+model Invoice {
+  id           String        @id @default(cuid())
+  invoiceNo    String        @unique
+  customerName String
+  mobile       String
+  total        Int
+  status       InvoiceStatus @default(Unpaid)
+  bookingId    String?       @unique
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+
+  booking      Booking?      @relation(fields: [bookingId], references: [id])
+  items        InvoiceItem[]
+}
+
+model InvoiceItem {
+  id          String  @id @default(cuid())
+  invoiceId   String
+  description String
+  amount      Int
+
+  invoice     Invoice @relation(fields: [invoiceId], references: [id], onDelete: Cascade)
+}
+
+// ─── Students ─────────────────────────────────────────
+
+model Student {
+  id            String        @id @default(cuid())
+  name          String
+  mobile        String
+  email         String?
+  city          String?
+  courseId      String?
+  batch         String
+  totalFees     Int
+  paidFees      Int           @default(0)
+  qualification String?
+  status        StudentStatus @default(Ongoing)
+  photo         String?
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+
+  course        Course?       @relation(fields: [courseId], references: [id])
+  payments      FeePayment[]
+}
+
+model FeePayment {
+  id        String   @id @default(cuid())
+  studentId String
+  amount    Int
+  date      DateTime @default(now())
+  notes     String?
+
+  student   Student  @relation(fields: [studentId], references: [id], onDelete: Cascade)
+}
+
+// ─── Gallery ──────────────────────────────────────────
+
+model GalleryImage {
+  id        String          @id @default(cuid())
+  url       String
+  category  GalleryCategory
+  featured  Boolean         @default(false)
+  createdAt DateTime        @default(now())
+}
+
+// ─── Testimonials ─────────────────────────────────────
+
+model Testimonial {
+  id        String   @id @default(cuid())
+  name      String
+  initials  String
+  review    String
+  rating    Int      @default(5)
+  visible   Boolean  @default(true)
+  createdAt DateTime @default(now())
+}
+
+// ─── Settings (key-value store) ───────────────────────
+
+model Setting {
+  key       String   @id
+  value     String
+  updatedAt DateTime @updatedAt
+}
