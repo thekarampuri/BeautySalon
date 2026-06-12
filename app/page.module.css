@@ -1,0 +1,281 @@
+/* Hero */
+.hero {
+  min-height: calc(100vh - 68px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+
+.heroContent {}
+
+.heroBadge {
+  display: inline-block;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #6B6B6B;
+  border: 1px solid rgba(26,26,26,0.2);
+  border-radius: 999px;
+  padding: 4px 14px;
+  margin-bottom: 24px;
+}
+
+.heroHeading {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(2.8rem, 5.5vw, 4.4rem);
+  font-weight: 400;
+  line-height: 1.1;
+  color: #1A1A1A;
+  margin-bottom: 20px;
+}
+
+.heroHeading em {
+  font-style: italic;
+  color: #E8809A;
+}
+
+.heroSub {
+  font-size: 1.05rem;
+  color: #6B6B6B;
+  line-height: 1.8;
+  max-width: 440px;
+  margin-bottom: 32px;
+}
+
+.heroCta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.heroStats {
+  display: flex;
+  gap: 32px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(26,26,26,0.1);
+}
+
+.heroStat {
+  display: flex;
+  flex-direction: column;
+}
+
+.heroStatNum {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #1A1A1A;
+  line-height: 1;
+}
+
+.heroStatLabel {
+  font-size: 0.78rem;
+  color: #6B6B6B;
+  margin-top: 4px;
+}
+
+.heroImage {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.heroImgBg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #FBE4E8 60%, #E3F0E0);
+  border-radius: 200px 200px 120px 120px;
+  z-index: 0;
+}
+
+.heroImgWrapper {
+  position: relative;
+  z-index: 1;
+  border-radius: 200px 200px 100px 100px;
+  overflow: hidden;
+  width: min(420px, 100%);
+  aspect-ratio: 0.8;
+  border: 1px solid rgba(26,26,26,0.1);
+}
+
+.heroImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heroAccentPill {
+  position: absolute;
+  bottom: 32px;
+  left: -16px;
+  background: #FFFFFF;
+  border: 1px solid #1A1A1A;
+  border-radius: 999px;
+  padding: 8px 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #1A1A1A;
+  z-index: 2;
+  box-shadow: 0 2px 12px rgba(26,26,26,0.08);
+}
+
+/* Section header row */
+.sectionHeaderRow {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+/* Category cards */
+.catCard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 28px 24px;
+  border-radius: 12px;
+  border: 1px solid rgba(26,26,26,0.1);
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.catCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 20px rgba(26,26,26,0.08);
+}
+
+.catIcon {
+  color: #1A1A1A;
+  margin-bottom: 4px;
+}
+
+.catName {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #1A1A1A;
+}
+
+.catDesc {
+  font-size: 0.85rem;
+  color: #6B6B6B;
+  line-height: 1.6;
+  flex: 1;
+}
+
+.catArrow {
+  font-size: 1.1rem;
+  color: #1A1A1A;
+  margin-top: 4px;
+}
+
+/* Course cards */
+.courseCard {
+  background: #FFFFFF;
+  border: 1px solid rgba(26,26,26,0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.courseCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 20px rgba(26,26,26,0.08);
+}
+
+.courseImgWrapper {
+  height: 200px;
+  overflow: hidden;
+}
+
+.courseImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.courseCard:hover .courseImg {
+  transform: scale(1.04);
+}
+
+.courseBody {
+  padding: 20px;
+}
+
+.courseName {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #1A1A1A;
+  margin-bottom: 8px;
+}
+
+.courseMeta {
+  display: flex;
+  gap: 16px;
+  font-size: 0.82rem;
+  color: #6B6B6B;
+}
+
+/* Offers banner */
+.offersBanner {
+  background: #E3F0E0;
+  border-top: 1px solid #1A1A1A;
+  border-bottom: 1px solid #1A1A1A;
+  padding: 64px 0;
+}
+
+.offersInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.offersLabel {
+  display: inline-block;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #6B6B6B;
+  margin-bottom: 10px;
+}
+
+.offersHeading {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  color: #1A1A1A;
+  margin-bottom: 10px;
+  max-width: 540px;
+}
+
+/* Responsive */
+@media (max-width: 860px) {
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding: 48px 24px;
+    text-align: center;
+  }
+
+  .heroSub { max-width: 100%; }
+  .heroCta { justify-content: center; }
+  .heroStats { justify-content: center; }
+
+  .heroImage {
+    display: none;
+  }
+
+  .sectionHeaderRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}

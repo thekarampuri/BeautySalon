@@ -1,0 +1,170 @@
+.footer {
+  background: #FBE4E8;
+  border-top: 1px solid #1A1A1A;
+  margin-top: auto;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 64px 24px 32px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+
+.brand {}
+
+.logoText {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #1A1A1A;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+}
+
+.logoSub {
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #6B6B6B;
+  margin-bottom: 16px;
+}
+
+.tagline {
+  font-size: 0.875rem;
+  color: #2B2B2B;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.socials {
+  display: flex;
+  gap: 12px;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid #1A1A1A;
+  border-radius: 50%;
+  color: #1A1A1A;
+  transition: all 0.2s;
+}
+
+.socialLink:hover {
+  background: #1A1A1A;
+  color: #FFFFFF;
+}
+
+.col {}
+
+.colTitle {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #1A1A1A;
+  margin-bottom: 16px;
+  letter-spacing: 0.02em;
+}
+
+.colLinks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.colLinks a {
+  font-size: 0.875rem;
+  color: #2B2B2B;
+  transition: color 0.2s;
+}
+
+.colLinks a:hover {
+  color: #1A1A1A;
+  text-decoration: underline;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contactRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: #2B2B2B;
+  line-height: 1.5;
+}
+
+.contactRow svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.hours {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 0.82rem;
+  color: #2B2B2B;
+  margin-top: 4px;
+}
+
+.hours strong {
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.bottom {
+  border-top: 1px solid rgba(26, 26, 26, 0.15);
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #6B6B6B;
+}
+
+.adminLink {
+  font-size: 0.75rem;
+  color: #6B6B6B;
+  text-decoration: none;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.adminLink:hover {
+  opacity: 1;
+}
+
+@media (max-width: 960px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 580px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .bottom {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+}

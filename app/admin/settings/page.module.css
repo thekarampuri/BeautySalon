@@ -1,0 +1,38 @@
+.settingsSections {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  max-width: 760px;
+}
+
+.section {
+  background: #FFFFFF;
+  border: 1px solid rgba(26,26,26,0.08);
+  border-radius: 10px;
+  padding: 24px 28px;
+}
+
+.sectionTitle {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #1A1A1A;
+  margin-bottom: 12px;
+}
+
+.divider {
+  height: 1px;
+  background: rgba(26,26,26,0.08);
+  margin-bottom: 20px;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 28px;
+}
+
+@media (max-width: 640px) {
+  .formGrid { grid-template-columns: 1fr; }
+  .section { padding: 20px; }
+}

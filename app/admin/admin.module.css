@@ -1,0 +1,96 @@
+/* Shared styles for admin pages */
+
+.pageHeader {
+  margin-bottom: 24px;
+}
+
+.pageTitle {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #1A1A1A;
+  margin-bottom: 4px;
+}
+
+.toolbar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.searchInput {
+  flex: 1;
+  min-width: 200px;
+  padding: 8px 14px;
+  border: 1px solid rgba(26,26,26,0.12);
+  border-radius: 8px;
+  font-size: 0.875rem;
+  background: #FFFFFF;
+  color: #2B2B2B;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.searchInput:focus {
+  border-color: #1A1A1A;
+}
+
+.filterSelect {
+  padding: 8px 14px;
+  border: 1px solid rgba(26,26,26,0.12);
+  border-radius: 8px;
+  font-size: 0.875rem;
+  background: #FFFFFF;
+  color: #2B2B2B;
+  outline: none;
+  cursor: pointer;
+}
+
+.actionBtn {
+  margin-left: auto;
+}
+
+.tabBar {
+  display: flex;
+  gap: 2px;
+  border-bottom: 1px solid rgba(26,26,26,0.1);
+  margin-bottom: 20px;
+}
+
+.tab {
+  padding: 8px 20px;
+  font-size: 0.875rem;
+  color: #6B6B6B;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.15s;
+  margin-bottom: -1px;
+}
+
+.tab:hover {
+  color: #1A1A1A;
+}
+
+.tabActive {
+  color: #1A1A1A;
+  font-weight: 500;
+  border-bottom-color: #1A1A1A;
+}
+
+.feeBar {
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(26,26,26,0.08);
+  min-width: 100px;
+  overflow: hidden;
+}
+
+.feeBarFill {
+  height: 100%;
+  border-radius: 3px;
+  background: #A8C9A3;
+}

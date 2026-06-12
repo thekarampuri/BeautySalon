@@ -1,0 +1,60 @@
+.galleryGrid {
+  columns: 3;
+  column-gap: 16px;
+}
+
+.galleryItem {
+  position: relative;
+  break-inside: avoid;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  border: 1px solid rgba(26,26,26,0.1);
+  cursor: pointer;
+}
+
+.galleryItem:hover .galleryOverlay {
+  opacity: 1;
+}
+
+.galleryItem:hover .imgPlaceholder {
+  transform: scale(1.04);
+}
+
+.imgPlaceholder {
+  width: 100%;
+  min-height: 220px;
+  background: var(--clr-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #C0B8C0;
+  font-size: 0.8rem;
+  transition: transform 0.4s ease;
+}
+
+/* Alternate heights for masonry feel */
+.galleryItem:nth-child(3n+1) .imgPlaceholder { min-height: 280px; }
+.galleryItem:nth-child(3n+2) .imgPlaceholder { min-height: 220px; }
+.galleryItem:nth-child(3n+3) .imgPlaceholder { min-height: 260px; }
+
+.galleryOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(26,26,26,0.45);
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  padding: 16px;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+@media (max-width: 860px) {
+  .galleryGrid { columns: 2; }
+}
+@media (max-width: 540px) {
+  .galleryGrid { columns: 1; }
+}

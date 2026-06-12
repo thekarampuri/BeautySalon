@@ -1,0 +1,84 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.pageHeader {
+  margin-bottom: 4px;
+}
+
+.pageTitle {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #1A1A1A;
+  margin-bottom: 4px;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.chartPlaceholder {
+  background: #FFFFFF;
+  border: 1px solid rgba(26,26,26,0.08);
+  border-radius: 10px;
+  padding: 20px 24px 16px;
+}
+
+.chartLabel {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #6B6B6B;
+  margin-bottom: 16px;
+}
+
+.chartBars {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  height: 80px;
+}
+
+.bar {
+  flex: 1;
+  background: #FBE4E8;
+  border-radius: 2px 2px 0 0;
+  border: 1px solid rgba(244,166,183,0.3);
+  min-height: 4px;
+  transition: background 0.15s;
+}
+
+.bar:hover {
+  background: #F4A6B7;
+}
+
+.tablesRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.tableBlock {}
+
+.tableHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.tableTitle {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+@media (max-width: 1000px) {
+  .statsGrid { grid-template-columns: repeat(2, 1fr); }
+  .tablesRow { grid-template-columns: 1fr; }
+}
