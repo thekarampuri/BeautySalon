@@ -75,121 +75,115 @@ export type Student = {
 
 // ─── Mock Data ────────────────────────────────────────────────────
 export const services: Service[] = [
-  {
-    id: 's1',
-    name: 'Hair Styling & Smoothening',
-    category: 'Hair',
-    price: 2500,
-    duration: '2–3 hrs',
-    description: 'Professional hair smoothening and styling for silky, frizz-free hair.',
-    image: '/images/services/hair/style-1.jpg',
-  },
-  {
-    id: 's2',
-    name: 'Classic Facial',
-    category: 'Skin',
-    price: 1200,
-    duration: '60 min',
-    description: 'Deep cleansing facial with premium skincare products for a radiant glow.',
-    image: '/images/services/skin/facial-1.jpg',
-  },
-  {
-    id: 's3',
-    name: 'HD Makeup',
-    category: 'Makeup',
-    price: 4500,
-    duration: '90 min',
-    description: 'Camera-ready HD makeup with long-lasting, flawless finish.',
-    image: '/images/services/makeup/hd-1.jpg',
-  },
-  {
-    id: 's4',
-    name: 'Bridal Makeup Package',
-    category: 'Bridal',
-    price: 25000,
-    duration: 'Full Day',
-    description: 'Complete bridal look including makeup, hair, draping, and touch-ups.',
-    image: '/images/services/bridal/package-1.jpg',
-  },
-  {
-    id: 's5',
-    name: 'Nail Art & Extensions',
-    category: 'Nail',
-    price: 1800,
-    duration: '90 min',
-    description: 'Custom nail art designs and gel extensions for stunning hands.',
-    image: '/images/services/nail/art-1.jpg',
-  },
-  {
-    id: 's6',
-    name: 'Aromatherapy Spa',
-    category: 'Spa',
-    price: 3000,
-    duration: '2 hrs',
-    description: 'Rejuvenating full-body aromatherapy massage and body treatment.',
-    image: '/images/services/spa/aroma-1.jpg',
-  },
+  // Hair Services
+  { id: 's1', name: 'Hair Cutting & Trimming', category: 'Hair', price: 150, duration: '30 min', description: 'Base/Straight (₹150), U-Cut (₹200), Layer/Feather (₹400), Advance Haircut (₹500), Kids (₹150).', image: '/images/services/hair/style-1.jpg' },
+  { id: 's2', name: 'Hair Styling & Setting', category: 'Hair', price: 500, duration: '45 min', description: 'Ironing (₹500), Tongs (₹500), Hot Rollers (₹200), Blow Dry (₹150).', image: '/images/services/hair/style-2.jpg' },
+  { id: 's3', name: 'Hair Colouring', category: 'Hair', price: 2500, duration: '2 hrs', description: 'Global (₹2,500), Balayage (₹3,000), Global + Highlights (₹4,000), Highlights per strand (₹2,000), Root Touchup (₹800).', image: '/images/services/hair/style-3.jpg' },
+  { id: 's4', name: 'Hair Chemical Treatments', category: 'Hair', price: 6000, duration: '3-4 hrs', description: 'Straightening (₹5,000), Smoothening (₹4,000), Rebonding/Bluetox/Keratin (₹6,000), Nano Plastic/Botox (₹7,000), Nanogel/Cysteine (₹8,000).', image: '/images/services/hair/style-4.jpg' },
+  { id: 's5', name: 'Hair Spa & Scalp Treatments', category: 'Hair', price: 1500, duration: '60 min', description: 'Hair Spa (₹1,000), Anti-Dandruff/Hairfall (₹1,500), Collagen Treatment (₹2,000), Power Mix (₹2,000).', image: '/images/services/hair/style-5.jpg' },
+
+  // Skin Services
+  { id: 's6', name: 'Regular & Premium Facials', category: 'Skin', price: 1000, duration: '45 min', description: 'Fruit/Papaya (₹600), Whitening/Pearl (₹700), Diamond/Gold/Red Wine (₹1,000).', image: '/images/services/skin/facial-1.jpg' },
+  { id: 's7', name: 'Advance Clinical Facials', category: 'Skin', price: 1500, duration: '60 min', description: 'Hydra Facial (₹3,500), O3 Whitening (₹2,500), Korean Glass (₹1,500), Shahnaz Gold (₹1,500).', image: '/images/services/skin/facial-2.jpg' },
+  { id: 's8', name: 'Face Cleanup & D-Tan', category: 'Skin', price: 600, duration: '30 min', description: 'Cleanup (₹400), Cleanup+DTan (₹600), DTan Raaga (₹800), Face Bleach (₹200).', image: '/images/services/skin/facial-3.jpg' },
+  { id: 's9', name: 'Threading & Face Waxing', category: 'Skin', price: 100, duration: '15 min', description: 'Eyebrow (₹50), Full Face Wax (₹200), Upper Lip (₹20 Thread / ₹50 Wax).', image: '/images/services/skin/facial-4.jpg' },
+
+  // Spa & Body Services
+  { id: 's10', name: 'Body Waxing', category: 'Spa', price: 500, duration: '45 min', description: 'Hand Wax (₹200), Leg Full Wax (₹500), Rica Wax (₹400+), Full Body Wax (₹2,500).', image: '/images/services/spa/aroma-1.jpg' },
+  { id: 's11', name: 'Body Treatments & Spa', category: 'Spa', price: 2500, duration: '90 min', description: 'Body Massage (₹3,000), Body Polishing (₹2,500), Body Bleach (₹2,000), Body Spa (₹2,000).', image: '/images/services/spa/aroma-2.jpg' },
+  { id: 's12', name: 'Manicure & Pedicure', category: 'Spa', price: 800, duration: '60 min', description: 'Relaxing Spa Manicure (₹600) and Pedicure (₹800).', image: '/images/services/spa/aroma-3.jpg' },
 ];
 
 export const makeupServices = [
-  { id: 'm1', name: 'Bridal Makeup', price: 25000, description: 'Traditional or contemporary bridal look', image: '/images/makeup/bridal/look-1.jpg' },
-  { id: 'm2', name: 'Engagement Makeup', price: 8000, description: 'Soft, glowing look for your engagement day', image: '/images/makeup/engagement/look-1.jpg' },
-  { id: 'm3', name: 'HD Makeup', price: 4500, description: 'High-definition finish for events and shoots', image: '/images/makeup/hd/look-1.jpg' },
-  { id: 'm4', name: 'Airbrush Makeup', price: 6000, description: 'Ultra-smooth, lightweight airbrush application', image: '/images/makeup/airbrush/look-1.jpg' },
-  { id: 'm5', name: 'Party Makeup', price: 2500, description: 'Glamorous makeup for parties and celebrations', image: '/images/makeup/party/look-1.jpg' },
-  { id: 'm6', name: 'Reception Makeup', price: 12000, description: 'Elegant reception look that lasts all night', image: '/images/makeup/reception/look-1.jpg' },
+  { id: 'm1', name: 'Wedding Makeup (HD / 3D)', price: 10000, description: 'Includes Makeup, Hairstyle, Draping, Hair Extensions, Lens & Lashes', image: '/images/makeup/bridal/look-1.jpg' },
+  { id: 'm2', name: 'Wedding Makeup (Basic)', price: 8000, description: 'Includes Makeup, Hairstyle, Draping, Hair Extensions, Lens & Lashes', image: '/images/makeup/bridal/look-2.jpg' },
+  { id: 'm3', name: 'Reception Makeup (HD / 3D)', price: 10000, description: 'Includes full HD makeup, hair, and draping for reception', image: '/images/makeup/reception/look-1.jpg' },
+  { id: 'm4', name: 'Reception Makeup (Basic)', price: 8000, description: 'Elegant basic reception look', image: '/images/makeup/reception/look-2.jpg' },
+  { id: 'm5', name: 'Sangeet Makeup (HD / 3D)', price: 7000, description: 'Glamorous HD look for Sangeet', image: '/images/makeup/party/look-1.jpg' },
+  { id: 'm6', name: 'Prathanam Makeup (HD / 3D)', price: 7000, description: 'Traditional HD look', image: '/images/makeup/hd/look-1.jpg' },
+  { id: 'm7', name: 'Engagement HD / 3D Makeup', price: 8000, description: 'Includes Lens & Lashes', image: '/images/makeup/engagement/look-1.jpg' },
+  { id: 'm8', name: 'Engagement Basic Makeup', price: 6000, description: 'Includes Makeup, Hairstyle & Draping', image: '/images/makeup/engagement/look-2.jpg' },
+  { id: 'm9', name: 'Baby Shower HD / 3D', price: 6000, description: 'Includes Lens & Lashes', image: '/images/makeup/party/look-2.jpg' },
+  { id: 'm10', name: 'Baby Shower / Haldi / Mehendi', price: 5000, description: 'Basic elegant makeup for pre-wedding functions', image: '/images/makeup/party/look-3.jpg' },
+  { id: 'm11', name: 'Sider HD / 3D Makeup', price: 3500, description: 'For bridesmaids. Includes Hairstyle, Draping, Lash, Lens', image: '/images/makeup/party/look-4.jpg' },
+  { id: 'm12', name: 'Sider Basic Makeup', price: 2000, description: 'Basic Makeup, Hairstyle & Draping', image: '/images/makeup/party/look-5.jpg' },
+  { id: 'm13', name: 'Single Saree Draping & Hairstyle', price: 1200, description: 'Advance Hairstyle (₹1,000), Basic (₹500), Saree Draping (₹200)', image: '/images/makeup/bridal/look-1.jpg' },
 ];
 
 export const courses: Course[] = [
   {
     id: 'c1',
-    name: 'Professional Makeup Artist Course',
-    duration: '3 Months',
-    fees: 45000,
-    description: 'Master the art of professional makeup — from basics to advanced bridal looks.',
-    eligibility: '10th pass or above, any background welcome',
+    name: 'Advanced Course (Hair, Skin, Makeup & Beauty)',
+    duration: '6 Months',
+    fees: 50000,
+    description: 'Comprehensive professional training covering all aspects of premium salon services.',
+    eligibility: 'Open to all',
     image: '/images/courses/makeup/course-1.jpg',
     modules: [
-      'Skin Analysis & Prep',
-      'Foundation & Contouring',
-      'Eye Makeup Techniques',
-      'Bridal Makeup',
-      'HD & Airbrush Makeup',
-      'Portfolio & Industry Prep',
+      'Advanced Skin Care & Treatments',
+      'Professional HD & 3D Makeup',
+      'Hair Styling & Chemical Services',
+      'Salon Management & Setup'
     ],
   },
   {
     id: 'c2',
-    name: 'Hair Styling & Coloring',
-    duration: '2 Months',
-    fees: 35000,
-    description: 'Learn professional hair styling, cutting, and coloring techniques used in top salons.',
-    eligibility: '10th pass or above',
-    image: '/images/courses/hair/course-1.jpg',
+    name: 'Basic Salon Course (Hair, Skin & Beauty)',
+    duration: '3 Months',
+    fees: 20000,
+    description: 'Foundation course covering the essential skills to start a career in beauty.',
+    eligibility: 'Open to all',
+    image: '/images/courses/skin/course-1.jpg',
     modules: [
-      'Hair Structure & Analysis',
-      'Basic Cutting Techniques',
-      'Advanced Styling',
-      'Hair Coloring & Highlights',
-      'Keratin & Rebonding',
-      'Salon Management',
+      'Basic Haircuts & Styling',
+      'Regular & Advance Facials',
+      'Waxing, Threading & Cleanup',
+      'Basic Spa & Massages'
     ],
   },
   {
     id: 'c3',
-    name: 'Skin Care & Facials',
-    duration: '1.5 Months',
+    name: 'Makeup & Hairstyle Masterclass',
+    duration: '1 Month',
     fees: 25000,
-    description: 'Deep dive into skincare science, facial techniques, and treatment protocols.',
+    description: 'Intensive masterclass focusing purely on advanced makeup and hair styling techniques.',
     eligibility: 'Open to all',
-    image: '/images/courses/skin/course-1.jpg',
+    image: '/images/courses/makeup/course-2.jpg',
     modules: [
-      'Skin Types & Conditions',
-      'Classic & Luxury Facials',
-      'Chemical Peels',
-      'Cleanup & Bleach',
-      'Anti-Aging Treatments',
-      'Product Knowledge',
+      'HD & 3D Bridal Makeup',
+      'Engagement & Party Looks',
+      'Advanced Hairstyles & Extensions',
+      'Saree Draping Techniques'
+    ],
+  },
+  {
+    id: 'c4',
+    name: 'Individual Specialization Courses',
+    duration: 'Varies',
+    fees: 10000,
+    description: 'Specialized individual modules: Hair Chemical (₹20k), Haircutting (₹10k), Makeup (₹20k), Hairstyle (₹10k).',
+    eligibility: 'Open to all',
+    image: '/images/courses/hair/course-1.jpg',
+    modules: [
+      'Hair Chemical Master (Smoothening, Keratin)',
+      'Precision Haircutting',
+      'Professional Makeup Artist',
+      'Bridal Hairstyling'
+    ],
+  },
+  {
+    id: 'c5',
+    name: 'Personal Makeup',
+    duration: '15 Days',
+    fees: 5000,
+    description: 'Learn to do your own makeup flawlessly for everyday office looks and parties.',
+    eligibility: 'Open to all',
+    image: '/images/courses/makeup/course-3.jpg',
+    modules: [
+      'Skin Prep & Base Building',
+      'Everyday & Office Makeup',
+      'Evening Party Looks',
+      'Product Knowledge & Personal Kit'
     ],
   },
 ];
@@ -268,10 +262,9 @@ export const invoices: Invoice[] = [
 ];
 
 export const students: Student[] = [
-  { id: 'st1', name: 'Aisha Shaikh', mobile: '9870001234', email: 'aisha@email.com', course: 'Professional Makeup Artist Course', batch: 'Jan 2026', totalFees: 45000, paidFees: 45000, status: 'Ongoing' },
-  { id: 'st2', name: 'Ritika Bose', mobile: '9760009876', email: 'ritika@email.com', course: 'Hair Styling & Coloring', batch: 'Jan 2026', totalFees: 35000, paidFees: 17500, status: 'Ongoing' },
-  { id: 'st3', name: 'Tanvi Joshi', mobile: '9650008765', email: 'tanvi@email.com', course: 'Skin Care & Facials', batch: 'Oct 2025', totalFees: 25000, paidFees: 25000, status: 'Completed' },
-  { id: 'st4', name: 'Komal Verma', mobile: '9540007654', email: 'komal@email.com', course: 'Professional Makeup Artist Course', batch: 'Oct 2025', totalFees: 45000, paidFees: 30000, status: 'Ongoing' },
+  { id: 'st1', name: 'Aisha Shaikh', mobile: '9870001234', email: 'aisha@email.com', course: 'Advanced Course', batch: 'Jan 2026', totalFees: 50000, paidFees: 50000, status: 'Ongoing' },
+  { id: 'st2', name: 'Ritika Bose', mobile: '9760009876', email: 'ritika@email.com', course: 'Hair Styling Course', batch: 'Jan 2026', totalFees: 35000, paidFees: 17500, status: 'Ongoing' },
+  { id: 'st3', name: 'Tanvi Joshi', mobile: '9650008765', email: 'tanvi@email.com', course: 'Basic Salon Course', batch: 'Oct 2025', totalFees: 20000, paidFees: 20000, status: 'Completed' },
 ];
 
 export const galleryImages = [
