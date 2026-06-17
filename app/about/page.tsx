@@ -7,9 +7,9 @@ export const metadata: Metadata = {
 };
 
 const stats = [
-  { num: '15+', label: 'Years of Excellence' },
+  { num: '16+', label: 'Years Experience' },
   { num: '2000+', label: 'Happy Clients' },
-  { num: '500+', label: 'Students Trained' },
+  { num: '10+', label: 'Students Trained' },
   { num: '3', label: 'Professional Courses' },
 ];
 
@@ -26,34 +26,48 @@ export default function AboutPage() {
       <section className="section">
         <div className="container">
           <div className={styles.aboutGrid}>
-            <div className={styles.ownerImageWrapper}>
-              <div className={styles.ownerImageBg} />
-              <div className={styles.ownerImage}>
-                <div className={styles.ownerPlaceholder}>
-                  <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
-                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                    <circle cx="12" cy="7" r="4"/>
-                  </svg>
-                  <span>Owner Photo</span>
+            <div className={styles.duoImageContainer}>
+              <div className={styles.ownerImageWrapper}>
+                <div className={styles.ownerImageBg} style={{ background: 'var(--clr-pink-light)' }} />
+                <div className={styles.ownerImage}>
+                  <div className={styles.ownerPlaceholder}>
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                      <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                    <span>Mrs. Shamala</span>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.ownerImageWrapper} style={{ marginTop: 40 }}>
+                <div className={styles.ownerImageBg} style={{ background: 'var(--clr-green-light)' }} />
+                <div className={styles.ownerImage}>
+                  <div className={styles.ownerPlaceholder}>
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                      <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                    <span>Ms. Shravani</span>
+                  </div>
                 </div>
               </div>
             </div>
             <div className={styles.aboutContent}>
-              <p className="text-muted" style={{ textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.75rem', marginBottom: 12 }}>Founded 2010</p>
-              <h2 style={{ marginBottom: 20 }}>Crafting Beauty,<br />Building Careers</h2>
+              <p className="text-muted" style={{ textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.75rem', marginBottom: 12 }}>Founded 2012</p>
+              <h2 style={{ marginBottom: 20 }}>A Legacy of Beauty:<br />From Mother to Daughter</h2>
               <p style={{ marginBottom: 16 }}>
-                Mahalaxmi Beauty Salon & Academy was founded with a singular vision — to make every woman feel her most beautiful self, while also empowering aspiring beauty professionals with world-class training.
+                Mahalaxmi Beauty Salon & Academy was born in 2012 from the vision and passion of <strong>Mrs. Shamala Karampuri</strong>. With over 16 years of hands-on expertise in the beauty industry, she built the salon on a foundation of trust, exceptional service, and a deep understanding of what makes every woman feel truly beautiful. Her dedication transformed a modest studio in Solapur into a beloved local institution.
               </p>
               <p style={{ marginBottom: 16 }}>
-                Over 15 years, we've grown from a boutique salon in Solapur to a full-fledged beauty academy, training hundreds of students who now lead successful careers across the industry.
+                The legacy of artistry didn't stop there. Continuing the family tradition with a modern flair is her daughter, <strong>Ms. Shravani Karampuri</strong>. As a professional makeup artist with over 5 years of specialized experience, Shravani brings contemporary techniques, HD precision, and fresh bridal trends to the salon. Together, this dynamic mother-daughter duo perfectly blends timeless elegance with modern beauty standards.
               </p>
               <p style={{ marginBottom: 28 }}>
-                Our salon offers premium services in hair, skin, makeup, and bridal styling — always using the finest products and techniques. Our academy courses are designed by industry veterans, offering hands-on, practical training.
+                Beyond our premium salon services, we are deeply committed to empowering the next generation of beauty professionals. Through our dedicated academy, we have personally trained and mentored aspiring artists, equipping them with the skills to launch their own successful careers.
               </p>
               <div className={styles.missionBox}>
                 <h4 style={{ marginBottom: 8, fontFamily: 'Cormorant Garamond, serif' }}>Our Mission</h4>
                 <p style={{ fontSize: '0.9rem', margin: 0 }}>
-                  To blend artistry with education — creating a space where beauty is celebrated, skills are nurtured, and every client and student leaves feeling transformed.
+                  To celebrate artistry, build confidence, and ensure that every client who walks through our doors leaves feeling like their most radiant self.
                 </p>
               </div>
             </div>
