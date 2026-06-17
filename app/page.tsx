@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { services, courses, testimonials } from '@/lib/mock-data';
+import { courses, testimonials } from '@/lib/mock-data';
 import styles from './page.module.css';
 import TestimonialCarousel from '@/components/public/TestimonialCarousel';
 
