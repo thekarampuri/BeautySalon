@@ -82,7 +82,7 @@ export const services: Service[] = [
     price: 2500,
     duration: '2–3 hrs',
     description: 'Professional hair smoothening and styling for silky, frizz-free hair.',
-    image: '/images/service-hair.jpg',
+    image: '/images/services/hair/style-1.jpg',
   },
   {
     id: 's2',
@@ -91,7 +91,7 @@ export const services: Service[] = [
     price: 1200,
     duration: '60 min',
     description: 'Deep cleansing facial with premium skincare products for a radiant glow.',
-    image: '/images/service-skin.jpg',
+    image: '/images/services/skin/facial-1.jpg',
   },
   {
     id: 's3',
@@ -100,7 +100,7 @@ export const services: Service[] = [
     price: 4500,
     duration: '90 min',
     description: 'Camera-ready HD makeup with long-lasting, flawless finish.',
-    image: '/images/service-makeup.jpg',
+    image: '/images/services/makeup/hd-1.jpg',
   },
   {
     id: 's4',
@@ -109,7 +109,7 @@ export const services: Service[] = [
     price: 25000,
     duration: 'Full Day',
     description: 'Complete bridal look including makeup, hair, draping, and touch-ups.',
-    image: '/images/service-bridal.jpg',
+    image: '/images/services/bridal/package-1.jpg',
   },
   {
     id: 's5',
@@ -118,7 +118,7 @@ export const services: Service[] = [
     price: 1800,
     duration: '90 min',
     description: 'Custom nail art designs and gel extensions for stunning hands.',
-    image: '/images/service-hair.jpg',
+    image: '/images/services/nail/art-1.jpg',
   },
   {
     id: 's6',
@@ -127,17 +127,17 @@ export const services: Service[] = [
     price: 3000,
     duration: '2 hrs',
     description: 'Rejuvenating full-body aromatherapy massage and body treatment.',
-    image: '/images/service-skin.jpg',
+    image: '/images/services/spa/aroma-1.jpg',
   },
 ];
 
 export const makeupServices = [
-  { id: 'm1', name: 'Bridal Makeup', price: 25000, description: 'Traditional or contemporary bridal look', image: '/images/service-bridal.jpg' },
-  { id: 'm2', name: 'Engagement Makeup', price: 8000, description: 'Soft, glowing look for your engagement day', image: '/images/service-makeup.jpg' },
-  { id: 'm3', name: 'HD Makeup', price: 4500, description: 'High-definition finish for events and shoots', image: '/images/service-makeup.jpg' },
-  { id: 'm4', name: 'Airbrush Makeup', price: 6000, description: 'Ultra-smooth, lightweight airbrush application', image: '/images/service-skin.jpg' },
-  { id: 'm5', name: 'Party Makeup', price: 2500, description: 'Glamorous makeup for parties and celebrations', image: '/images/service-hair.jpg' },
-  { id: 'm6', name: 'Reception Makeup', price: 12000, description: 'Elegant reception look that lasts all night', image: '/images/service-bridal.jpg' },
+  { id: 'm1', name: 'Bridal Makeup', price: 25000, description: 'Traditional or contemporary bridal look', image: '/images/makeup/bridal/look-1.jpg' },
+  { id: 'm2', name: 'Engagement Makeup', price: 8000, description: 'Soft, glowing look for your engagement day', image: '/images/makeup/engagement/look-1.jpg' },
+  { id: 'm3', name: 'HD Makeup', price: 4500, description: 'High-definition finish for events and shoots', image: '/images/makeup/hd/look-1.jpg' },
+  { id: 'm4', name: 'Airbrush Makeup', price: 6000, description: 'Ultra-smooth, lightweight airbrush application', image: '/images/makeup/airbrush/look-1.jpg' },
+  { id: 'm5', name: 'Party Makeup', price: 2500, description: 'Glamorous makeup for parties and celebrations', image: '/images/makeup/party/look-1.jpg' },
+  { id: 'm6', name: 'Reception Makeup', price: 12000, description: 'Elegant reception look that lasts all night', image: '/images/makeup/reception/look-1.jpg' },
 ];
 
 export const courses: Course[] = [
@@ -148,7 +148,7 @@ export const courses: Course[] = [
     fees: 45000,
     description: 'Master the art of professional makeup — from basics to advanced bridal looks.',
     eligibility: '10th pass or above, any background welcome',
-    image: '/images/course-makeup.jpg',
+    image: '/images/courses/makeup/course-1.jpg',
     modules: [
       'Skin Analysis & Prep',
       'Foundation & Contouring',
@@ -165,7 +165,7 @@ export const courses: Course[] = [
     fees: 35000,
     description: 'Learn professional hair styling, cutting, and coloring techniques used in top salons.',
     eligibility: '10th pass or above',
-    image: '/images/course-hair.jpg',
+    image: '/images/courses/hair/course-1.jpg',
     modules: [
       'Hair Structure & Analysis',
       'Basic Cutting Techniques',
@@ -182,7 +182,7 @@ export const courses: Course[] = [
     fees: 25000,
     description: 'Deep dive into skincare science, facial techniques, and treatment protocols.',
     eligibility: 'Open to all',
-    image: '/images/course-skin.jpg',
+    image: '/images/courses/skin/course-1.jpg',
     modules: [
       'Skin Types & Conditions',
       'Classic & Luxury Facials',
@@ -275,10 +275,10 @@ export const students: Student[] = [
 ];
 
 export const galleryImages = [
-  { id: 'g1', src: '/images/gallery-bridal-1.jpg', category: 'Bridal', featured: true },
-  { id: 'g2', src: '/images/gallery-makeup-1.jpg', category: 'Makeup', featured: false },
-  { id: 'g3', src: '/images/gallery-salon-1.jpg', category: 'Salon', featured: false },
-  { id: 'g4', src: '/images/gallery-hair-1.jpg', category: 'Hair', featured: true },
-  { id: 'g5', src: '/images/gallery-bridal-2.jpg', category: 'Bridal', featured: true },
-  { id: 'g6', src: '/images/gallery-students-1.jpg', category: 'Students', featured: false },
+  { id: 'g1', src: '/images/gallery/bridal/image-1.jpg', category: 'Bridal', featured: true },
+  { id: 'g2', src: '/images/gallery/makeup/image-1.jpg', category: 'Makeup', featured: false },
+  { id: 'g3', src: '/images/gallery/salon/image-1.jpg', category: 'Salon', featured: false },
+  { id: 'g4', src: '/images/gallery/hair/image-1.jpg', category: 'Hair', featured: true },
+  { id: 'g5', src: '/images/gallery/bridal/image-2.jpg', category: 'Bridal', featured: true },
+  { id: 'g6', src: '/images/gallery/students/image-1.jpg', category: 'Students', featured: false },
 ];
