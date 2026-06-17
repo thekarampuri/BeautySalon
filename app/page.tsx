@@ -6,9 +6,9 @@ import styles from './page.module.css';
 import TestimonialCarousel from '@/components/public/TestimonialCarousel';
 
 export const metadata: Metadata = {
-  title: 'Mahalaxmi Beauty Salon & Academy — Pune\'s Premier Beauty Studio',
+  title: 'Mahalaxmi Beauty Salon & Academy — Solapur\'s Premier Beauty Studio',
   description:
-    'Expert bridal makeup, hair styling, skincare treatments & professional beauty courses in Pune. Book your appointment today.',
+    'Expert bridal makeup, hair styling, skincare treatments & professional beauty courses in Solapur. Book your appointment today.',
 };
 
 const serviceCategories = [
@@ -64,7 +64,7 @@ export default function HomePage() {
       {/* ── Hero ── */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.heroBadge}>Est. 2010 · Pune</span>
+          <span className={styles.heroBadge}>Est. 2010 · Solapur</span>
           <h1 className={styles.heroHeading}>
             Where Beauty<br />Meets <em>Artistry</em>
           </h1>

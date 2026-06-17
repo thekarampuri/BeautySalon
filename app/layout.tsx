@@ -9,8 +9,8 @@ export const metadata: Metadata = {
     template: '%s | Mahalaxmi Beauty Salon & Academy',
   },
   description:
-    'Pune\'s premier beauty salon and professional academy. Expert bridal makeup, hair styling, skincare, and certified beauty courses.',
-  keywords: ['beauty salon', 'bridal makeup', 'beauty academy', 'Pune salon', 'makeup courses'],
+    'Solapur\'s premier beauty salon and professional academy. Expert bridal makeup, hair styling, skincare, and certified beauty courses.',
+  keywords: ['beauty salon', 'bridal makeup', 'beauty academy', 'Solapur salon', 'makeup courses'],
 };
 
 export default function RootLayout({

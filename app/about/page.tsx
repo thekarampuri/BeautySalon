@@ -3,7 +3,7 @@ import styles from './page.module.css';
 
 export const metadata: Metadata = {
   title: 'About Us',
-  description: 'Learn about Mahalaxmi Beauty Salon & Academy — our story, mission, and the team behind Pune\'s premier beauty studio.',
+  description: 'Learn about Mahalaxmi Beauty Salon & Academy — our story, mission, and the team behind Solapur\'s premier beauty studio.',
 };
 
 const stats = [
@@ -45,7 +45,7 @@ export default function AboutPage() {
                 Mahalaxmi Beauty Salon & Academy was founded with a singular vision — to make every woman feel her most beautiful self, while also empowering aspiring beauty professionals with world-class training.
               </p>
               <p style={{ marginBottom: 16 }}>
-                Over 15 years, we've grown from a boutique salon in Pune to a full-fledged beauty academy, training hundreds of students who now lead successful careers across the industry.
+                Over 15 years, we've grown from a boutique salon in Solapur to a full-fledged beauty academy, training hundreds of students who now lead successful careers across the industry.
               </p>
               <p style={{ marginBottom: 28 }}>
                 Our salon offers premium services in hair, skin, makeup, and bridal styling — always using the finest products and techniques. Our academy courses are designed by industry veterans, offering hands-on, practical training.
