@@ -215,7 +215,7 @@ export const testimonials: Testimonial[] = [
 export const enquiries: Enquiry[] = [
   { id: 'e1', name: 'Riya Patel', mobile: '9876543210', type: 'Bridal', details: 'Interested in full bridal package for December wedding', status: 'New', date: '2025-12-10' },
   { id: 'e2', name: 'Sana Khan', mobile: '9765432109', type: 'Admission', details: 'Wants to join the makeup artist course starting January', status: 'Contacted', date: '2025-12-09' },
-  { id: 'e3', name: 'Divya Nair', mobile: 'Query about hair smoothening and pricing', type: 'Contact', details: 'Hair smoothening price enquiry', status: 'Converted', date: '2025-12-08', mobile: '9654321098' },
+  { id: 'e3', name: 'Divya Nair', mobile: '9654321098', type: 'Contact', details: 'Hair smoothening price enquiry', status: 'Converted', date: '2025-12-08' },
   { id: 'e4', name: 'Pooja Joshi', mobile: '9543210987', type: 'Bridal', details: 'Bridal booking for March — wanted portfolio review', status: 'Closed', date: '2025-12-07' },
   { id: 'e5', name: 'Meera Iyer', mobile: '9432109876', type: 'Admission', details: 'Enquiry about skincare course duration and fees', status: 'New', date: '2025-12-06' },
 ];
