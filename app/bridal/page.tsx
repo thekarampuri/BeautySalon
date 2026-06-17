@@ -13,6 +13,9 @@ export default function BridalPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const text = `Hello! I have a Bridal Enquiry from your website.\n\nName: ${form.name}\nMobile: ${form.mobile}\nWedding Date: ${form.weddingDate}\nVenue/City: ${form.venue}\nMakeup Type: ${form.makeupType}\nFunctions: ${form.functions}\nBudget: ${form.budget}\nMessage: ${form.message}`;
+    const url = `https://wa.me/919175085070?text=${encodeURIComponent(text)}`;
+    window.open(url, '_blank');
     setSubmitted(true);
   };
 
@@ -69,8 +72,8 @@ export default function BridalPage() {
             {submitted ? (
               <div className={styles.successBox}>
                 <div className={styles.successIcon}>✓</div>
-                <h3 style={{ fontFamily: 'Cormorant Garamond, serif', marginBottom: 8 }}>Thank you, {form.name}!</h3>
-                <p className="text-muted">Our bridal coordinator will call you within 24 hours to schedule your consultation.</p>
+                <h3 style={{ fontFamily: 'Cormorant Garamond, serif', marginBottom: 8 }}>Redirecting to WhatsApp...</h3>
+                <p className="text-muted">Our bridal coordinator will review your details there.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className={styles.bridalForm}>

@@ -11,6 +11,9 @@ export default function BookingModal({ service, onClose }: Props) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const text = `Hello! I would like to book an appointment.\n\nService: ${service.name}\nName: ${form.name}\nMobile: ${form.mobile}\nPreferred Date: ${form.date}\nPreferred Time: ${form.time}`;
+    const url = `https://wa.me/919175085070?text=${encodeURIComponent(text)}`;
+    window.open(url, '_blank');
     setSubmitted(true);
   };
 
@@ -28,8 +31,8 @@ export default function BookingModal({ service, onClose }: Props) {
         {submitted ? (
           <div className={styles.success}>
             <div className={styles.successIcon}>✓</div>
-            <h3 style={{ fontFamily: 'Cormorant Garamond, serif' }}>Booking Requested!</h3>
-            <p className="text-muted">We'll confirm your appointment within 2 hours via WhatsApp.</p>
+            <h3 style={{ fontFamily: 'Cormorant Garamond, serif' }}>Redirecting to WhatsApp...</h3>
+            <p className="text-muted">Please confirm your booking details in the chat.</p>
             <button className="btn btn-primary" onClick={onClose} style={{ marginTop: 16 }}>Close</button>
           </div>
         ) : (

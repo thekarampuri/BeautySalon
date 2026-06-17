@@ -9,6 +9,9 @@ export default function AdmissionPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const text = `Hello! I would like to apply for an Academy Course.\n\nCourse: ${form.course}\nName: ${form.name}\nMobile: ${form.mobile}\nEmail: ${form.email}\nCity: ${form.city}\nQualification: ${form.qualification}`;
+    const url = `https://wa.me/919175085070?text=${encodeURIComponent(text)}`;
+    window.open(url, '_blank');
     setSubmitted(true);
   };
 
@@ -27,9 +30,9 @@ export default function AdmissionPage() {
             {submitted ? (
               <div className={styles.success}>
                 <div className={styles.successIcon}>✓</div>
-                <h2 style={{ fontFamily: 'Cormorant Garamond, serif' }}>Application Received!</h2>
+                <h2 style={{ fontFamily: 'Cormorant Garamond, serif' }}>Redirecting to WhatsApp...</h2>
                 <p className="text-muted" style={{ maxWidth: 400, textAlign: 'center' }}>
-                  Thank you, {form.name}! Our admissions team will contact you within 2 business days to discuss the next steps.
+                  You can chat directly with our admissions team to discuss batch availability.
                 </p>
               </div>
             ) : (

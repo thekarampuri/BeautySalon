@@ -8,6 +8,9 @@ export default function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const text = `Hello! I have an enquiry from your website.\n\nName: ${form.name}\nMobile: ${form.mobile}\nEmail: ${form.email}\nMessage: ${form.message}`;
+    const url = `https://wa.me/919175085070?text=${encodeURIComponent(text)}`;
+    window.open(url, '_blank');
     setSubmitted(true);
   };
 
@@ -29,8 +32,8 @@ export default function ContactPage() {
               {submitted ? (
                 <div className={styles.success}>
                   <div className={styles.successIcon}>✓</div>
-                  <h4 style={{ fontFamily: 'Cormorant Garamond, serif' }}>Message Sent!</h4>
-                  <p className="text-muted">We'll get back to you within 24 hours.</p>
+                  <h4 style={{ fontFamily: 'Cormorant Garamond, serif' }}>Redirecting to WhatsApp...</h4>
+                  <p className="text-muted">You can continue the conversation there.</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className={styles.form}>
