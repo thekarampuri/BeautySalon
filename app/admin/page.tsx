@@ -15,7 +15,7 @@ export default function AdminDashboard() {
     <div className={styles.dashboard}>
       <div className={styles.pageHeader}>
         <h2 className={styles.pageTitle}>Dashboard</h2>
-        <p className="text-muted">Welcome back! Here's a quick overview.</p>
+        <p className="text-muted">Welcome back! Here&apos;s a quick overview.</p>
       </div>
 
       {/* Stat cards */}
