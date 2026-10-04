@@ -1,0 +1,127 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return isAuthenticated() && 
+        get(/databases/$(database)/documents/profiles/$(request.auth.uid)).data.role == 'admin';
+    }
+
+    // Profiles: users can read their own; admin can read/write all. No self-role escalation.
+    match /profiles/{uid} {
+      allow read: if isAuthenticated() && (request.auth.uid == uid || isAdmin());
+      allow create, update: if isAdmin() || (
+        isAuthenticated() && request.auth.uid == uid && 
+        !request.resource.data.diff(resource.data).affectedKeys().hasAny(['role'])
+      );
+      allow delete: if isAdmin();
+    }
+
+    // Public catalog & website CMS read; Admin write
+    match /sitePages/{id} {
+      allow read: if resource.data.isPublished == true || isAdmin();
+      allow write: if isAdmin();
+    }
+
+    match /sitePageSections/{id} {
+      allow read: if resource.data.isVisible == true || isAdmin();
+      allow write: if isAdmin();
+    }
+
+    match /siteNavigation/{id} {
+      allow read: if resource.data.isVisible == true || isAdmin();
+      allow write: if isAdmin();
+    }
+
+    match /announcements/{id} {
+      allow read: if resource.data.isActive == true || isAdmin();
+      allow write: if isAdmin();
+    }
+
+    match /offers/{id} {
+      allow read: if resource.data.isActive == true || isAdmin();
+      allow write: if isAdmin();
+    }
+
+    match /mediaAssets/{id} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /services/{id} {
+      allow read: if resource.data.isActive == true || isAdmin();
+      allow write: if isAdmin();
+    }
+
+    match /courses/{id} {
+      allow read: if resource.data.isActive == true || isAdmin();
+      allow write: if isAdmin();
+    }
+
+    match /courseModules/{id} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /academyBatches/{id} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /testimonials/{id} {
+      allow read: if resource.data.isPublished == true || isAdmin();
+      allow write: if isAdmin();
+    }
+
+    match /galleryImages/{id} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /businessSettings/{id} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // Public Lead Submission (Enquiries & Bookings)
+    match /enquiries/{id} {
+      allow create: if request.resource.data.status == 'New' && 
+        (!request.resource.data.keys().hasAny(['notes']));
+      allow read, update, delete: if isAdmin();
+    }
+
+    match /bookings/{id} {
+      allow create: if request.resource.data.status == 'Pending' && 
+        (!request.resource.data.keys().hasAny(['notes']));
+      allow read, update, delete: if isAdmin();
+    }
+
+    // Confidential Records (Admin ONLY - No Public Access)
+    match /invoices/{id} {
+      allow read, write: if isAdmin();
+    }
+
+    match /invoiceItems/{id} {
+      allow read, write: if isAdmin();
+    }
+
+    match /students/{id} {
+      allow read, write: if isAdmin();
+    }
+
+    match /studentPayments/{id} {
+      allow read, write: if isAdmin();
+    }
+
+    match /auditLogs/{id} {
+      allow read: if isAdmin();
+      allow create: if isAuthenticated();
+      allow update, delete: if false;
+    }
+  }
+}
