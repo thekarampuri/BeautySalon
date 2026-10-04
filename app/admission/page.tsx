@@ -39,7 +39,7 @@ export default function AdmissionPage() {
               <>
                 <div style={{ marginBottom: 32 }}>
                   <h2 style={{ fontFamily: 'Cormorant Garamond, serif', marginBottom: 8 }}>Apply for a Course</h2>
-                  <p className="text-muted">Fill in your details and we'll get back to you with batch availability and admission details.</p>
+                  <p className="text-muted">Fill in your details and we&apos;ll get back to you with batch availability and admission details.</p>
                 </div>
                 <form onSubmit={handleSubmit} className={styles.form}>
                   <div className={styles.formGrid}>

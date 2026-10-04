@@ -40,7 +40,7 @@ export default function TestimonialCarousel({ testimonials }: { testimonials: Te
             } ${i === (current + 1) % testimonials.length ? styles.cardNext : ''}`}
           >
             <StarRating rating={t.rating} />
-            <p className={styles.review}>"{t.review}"</p>
+            <p className={styles.review}>&quot;{t.review}&quot;</p>
             <div className={styles.author}>
               <div className={styles.avatar}>{t.initials}</div>
               <span className={styles.name}>{t.name}</span>
